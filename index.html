@@ -1,173 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Mullah Adhan Omar</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        nav {
-            background: #34495e;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1.5rem;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background: #2c3e50;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-
-        .about-content {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .project-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.2s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-card h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill {
-            background: #3498db;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-        }
-
-        .contact-info {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-
-        .contact-info p {
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            nav a {
-                display: block;
-                padding: 0.5rem;
-            }
-        }
-    </style>
+    <title>Mullah Adhan Omar - Portfolio</title>
+    <link rel="stylesheet" href="styles/portfolio.css">
 </head>
 <body>
-    <header>
-        <h1>Mullah Adhan Omar</h1>
-        <p>Web Developer | Designer | Business Analyst</p>
-    </header>
 
     <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+        
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
     </nav>
 
+    <header class="reveal">
+        <h1>Mullah Adhan Omar</h1>
+        <p>Web Developer. Designer. Business Analyst.</p>
+    </header>
+
     <div class="container">
-        <section id="about">
+        <section id="about" class="reveal">
             <h2>About Me</h2>
             <div class="about-content">
                 <p>Hello! I'm a passionate developer from Kenya, currently studying for a Bachelor's degree in Business Administration in South Korea. I have experience in creating web applications and doing design work. I love building things that live on the internet and solving complex problems with simple, elegant solutions.</p>
@@ -176,39 +37,50 @@
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2 class="reveal">Projects</h2>
             <div class="projects">
-                <div class="project-card">
-                    <img src="images/CommunityCleanUpEnvironmentalPoster.jpeg" alt="Community Clean-Up Environmental Poster" class="project-image">
+                <div class="project-card reveal">
+                    <img src="images/CommunityCleanUpEnvironmentalPoster.jpeg" alt="Community Clean-Up" class="project-image">
                     <div class="project-content">
-                        <h3>Community Clean-Up Environmental Poster</h3>
-                        <p>A clean, modern poster designed to raise awareness about plastic pollution and promote a community clean-up event. Highlights event details using bold typography and minimal graphic elements.</p>
+                        <h3>Community Clean-Up</h3>
+                        <p>A clean, modern poster designed to raise awareness about plastic pollution and promote a community clean-up event.</p>
+                        <span class="project-link-fake">View Design</span>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <img src="images/EditorialFoodDesign.jpeg" alt="Editorial Food Design" class="project-image">
                     <div class="project-content">
                         <h3>Editorial Food Design</h3>
-                        <p>A magazine-style visual design narrating the surprising origin of the croissant. Combines warm food photography with refined typography for storytelling.</p>
+                        <p>A magazine-style visual design narrating the surprising origin of the croissant. Warm photography meets refined typography.</p>
+                        <span class="project-link-fake">View Design</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="images/CrossingWildlife.jpeg" alt="Wildlife Feature Poster" class="project-image">
+                <div class="project-card reveal">
+                    <img src="images/CrossingWildlife.jpeg" alt="Wildlife Feature" class="project-image">
                     <div class="project-content">
-                        <h3>Wildlife Feature Poster</h3>
-                        <p>A nature-themed poster capturing the Maasai Mara wildlife migration. Focuses on minimal composition, emotional impact, and bold text to communicate the power of this natural event.</p>
+                        <h3>Wildlife Feature</h3>
+                        <p>A nature-themed poster capturing the Maasai Mara wildlife migration. Minimal composition with emotional impact.</p>
+                        <span class="project-link-fake">View Design</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <img src="images/projectManagement.png" alt="Pan Europa" class="project-image">
+                    <div class="project-content">
+                        <h3>Pan Europa</h3>
+                        <p>Convincing investors to approve budget for the new project</p>
+                        <a href="project.html" target="_blank"> <span class="project-link-fake">View Design</span></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="reveal">
             <h2>Skills</h2>
             <div class="skills-list">
                 <span class="skill">HTML/CSS</span>
                 <span class="skill">JavaScript</span>
                 <span class="skill">React</span>
-                <span class="skill">Node.js</span>
+                <span class="skill">SQL</span>
                 <span class="skill">Python</span>
                 <span class="skill">Git</span>
                 <span class="skill">Photoshop</span>
@@ -217,18 +89,75 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="reveal">
             <h2>Contact</h2>
             <div class="contact-info">
                 <p><strong>Email:</strong> Mullahadhan@gmail.com</p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/Blackhammer03" target="_blank" style="color: #3498db; text-decoration: none;">github.com/Blackhammer03</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/OmarMullahAdhan" target="_blank">github.com/MullahOmarAdhan</a></p>
                 <p><strong>Location:</strong> Sokcho, South Korea</p>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Mullah Adhan Omar. All rights reserved.</p>
+        <p>Copyright © 2025 Mullah Adhan Omar. All rights reserved.</p>
     </footer>
+
+    <script src="scripts/portfolio.js"></script>
+    <!-- <script>
+        // --- 1. Dark Mode Logic ---
+        const toggleBtn = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('icon-sun');
+        const moonIcon = document.getElementById('icon-moon');
+        const htmlElement = document.documentElement;
+
+        // Check for saved user preference, if any, on load
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+        if (currentTheme) {
+            htmlElement.setAttribute('data-theme', currentTheme);
+            updateIcons(currentTheme);
+        }
+
+        toggleBtn.addEventListener('click', function() {
+            if (htmlElement.getAttribute('data-theme') === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                updateIcons('light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                updateIcons('dark');
+            }
+        });
+
+        function updateIcons(theme) {
+            if (theme === 'dark') {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+        }
+
+        // --- 2. Scroll Animation (Intersection Observer) ---
+        const observerOptions = {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+            rootMargin: "0px 0px -50px 0px" // Offset slightly so it triggers before bottom
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script> -->
 </body>
 </html>
