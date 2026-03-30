@@ -140,6 +140,7 @@
             margin-bottom: 24px;
             color: var(--text-primary);
             background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
