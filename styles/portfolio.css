@@ -72,13 +72,24 @@
         nav a {
             color: var(--text-primary);
             text-decoration: none;
-            font-size: 12px;
             opacity: 0.8;
             transition: opacity 0.2s ease;
             font-weight: 400;
         }
 
         nav a:hover {
+            opacity: 1;
+        }
+
+        a {
+            color: var(--text-primary);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+            font-weight: 400;
+        }
+
+        a:hover {
             opacity: 1;
         }
 
